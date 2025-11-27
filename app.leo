@@ -1,3 +1,6 @@
+// web3_style_gauge.aleo
+// Tiny style selector for Web3 architectures (Aztec / Zama / Soundness-first).
+// This file is intentionally minimal: no randomness, only pure scoring logic.
 // app.leo
 // Leo program that picks a Web3 architecture style
 // based on three simple preference scores.
