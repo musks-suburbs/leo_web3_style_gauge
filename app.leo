@@ -6,7 +6,7 @@
 //   0u8 => Aztec-style zk privacy rollup
 //   1u8 => Zama-style FHE compute stack
 //   2u8 => Soundness-first protocol lab
-
+const MAX_PREF: u8 = 10u8;
 program web3_style_gauge.aleo;
 
 function choose_style(
