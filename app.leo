@@ -28,6 +28,9 @@ function choose_style(
     // Soundness-first: maximum weight on soundness, some privacy.
     let sound_score: u16 = s * 4u16 + p;
 
+    // Note: in case of equal scores, the earlier style in this order wins:
+    // Aztec (0) > Zama (1) > Soundness (2).
+
     // Track the best score and index.
     let mut best_idx: u8 = 0u8;
     let mut best_score: u16 = aztec_score;
