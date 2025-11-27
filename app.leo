@@ -9,6 +9,11 @@
 
 program web3_style_gauge.aleo;
 
+// Returns a style index:
+//   0u8 -> Aztec-style zk privacy rollup
+//   1u8 -> Zama-style FHE compute stack
+//   2u8 -> Soundness-first protocol lab
+
 function choose_style(
     privacy: u8,    // how important privacy is  (0–10)
     fhe: u8,        // how important FHE is      (0–10)
