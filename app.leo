@@ -45,6 +45,7 @@ function choose_style(
     best_idx
 }
 
+/// Public wrapper so the chosen style can be verified on-chain.
 transition choose_style_public(
     privacy: u8,
     fhe: u8,
