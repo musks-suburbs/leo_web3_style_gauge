@@ -115,5 +115,17 @@ transition style_scores_public(
     let chosen: u8 =
         choose_style_extended(privacy, fhe, soundness, ux_speed);
 
+// Public transition: return only the four style scores.
+transition style_scores_only_public(
+    privacy: u8,
+    fhe: u8,
+    soundness: u8,
+    ux_speed: u8,
+) -> (u16, u16, u16, u16) {
+    let (aztec_score, zama_score, soundness_score, ux_score) =
+        compute_scores(privacy, fhe, soundness, ux_speed);
+    return (aztec_score, zama_score, soundness_score, ux_score);
+}
+
     return (aztec_score, zama_score, soundness_score, ux_score, chosen);
 }
