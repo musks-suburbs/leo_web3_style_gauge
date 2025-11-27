@@ -1,3 +1,6 @@
+// web3_style_gauge_v3: classify projects into Aztec / Zama / Soundness / UX styles
+// based on 4 sliders: privacy, FHE, soundness, UX speed.
+
 program web3_style_gauge_v3.aleo;
 
 // ------------------------
