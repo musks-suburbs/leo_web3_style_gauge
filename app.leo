@@ -14,7 +14,7 @@ function choose_style(
     fhe: u8,        // how important FHE is      (0–10)
     soundness: u8   // how important soundness is (0–10)
 ) -> u8 {
-    // Convert to u16 for safer arithmetic.
+     // Convert to u16 for safer arithmetic (avoid overflow in weighted sums).
     let p: u16 = privacy as u16;
     let f: u16 = fhe as u16;
     let s: u16 = soundness as u16;
@@ -27,6 +27,10 @@ function choose_style(
 
     // Soundness-first: maximum weight on soundness, some privacy.
     let sound_score: u16 = s * 4u16 + p;
+    // Convert to u16 for safer arithmetic (avoid overflow in weighted sums).
+    let p: u16 = privacy as u16;
+    let f: u16 = fhe as u16;
+    let s: u16 = soundness as u16;
 
     // Track the best score and index.
     let mut best_idx: u8 = 0u8;
