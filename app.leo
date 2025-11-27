@@ -9,7 +9,7 @@
 
 program web3_style_gauge.aleo;
 
-function choose_style(
+    choose_style_internal(privacy, fhe, soundness)
     privacy: u8,    // how important privacy is  (0–10)
     fhe: u8,        // how important FHE is      (0–10)
     soundness: u8   // how important soundness is (0–10)
