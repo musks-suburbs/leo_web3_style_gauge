@@ -19,7 +19,7 @@ function choose_style(
     let f: u16 = fhe as u16;
     let s: u16 = soundness as u16;
 
-    // Aztec-style: strong privacy, plus soundness.
+       // All scores are dimensionless weighted sums of [0..MAX_PREF] preferences.
     let aztec_score: u16 = p * 3u16 + s * 2u16;
 
     // Zama-style: strong privacy plus FHE-heavy compute.
