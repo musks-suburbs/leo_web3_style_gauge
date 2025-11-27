@@ -79,6 +79,21 @@ transition choose_style_public_v3(
     let style: u8 = choose_style_extended(privacy, fhe, soundness, ux_speed);
     return style;
 }
+// Heuristic weights for each style.
+const W_PRIVACY_AZTEC: u16 = 3u16;
+const W_SOUNDNESS_AZTEC: u16 = 2u16;
+const W_UX_AZTEC: u16 = 1u16;
+
+const W_PRIVACY_ZAMA: u16 = 2u16;
+const W_FHE_ZAMA: u16 = 3u16;
+const W_SOUNDNESS_ZAMA: u16 = 1u16;
+
+const W_SOUNDNESS_SND: u16 = 4u16;
+const W_PRIVACY_SND: u16 = 1u16;
+
+const W_UX_UX: u16 = 4u16;
+const W_PRIVACY_UX: u16 = 1u16;
+const W_SOUNDNESS_UX: u16 = 1u16;
 
 // This one exposes all scores AND the chosen style index,
 // useful for debugging or richer off-chain logic.
