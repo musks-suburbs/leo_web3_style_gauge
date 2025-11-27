@@ -1,5 +1,10 @@
 program web3_style_gauge_v3.aleo;
 
+// Style indices for readability.
+const STYLE_AZTEC: u8 = 0u8;
+const STYLE_ZAMA: u8 = 1u8;
+const STYLE_SOUNDNESS: u8 = 2u8;
+const STYLE_UX: u8 = 3u8;
 // ------------------------
 // Core scoring function
 // ------------------------
