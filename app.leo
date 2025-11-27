@@ -45,6 +45,9 @@ function choose_style(
     best_idx
 }
 
+// Example:
+//   choose_style_public(privacy=9u8, fhe=2u8, soundness=7u8) -> STYLE_AZTEC (0u8)
+//   choose_style_public(privacy=9u8, fhe=9u8, soundness=5u8) -> STYLE_ZAMA  (1u8)
 transition choose_style_public(
     privacy: u8,
     fhe: u8,
