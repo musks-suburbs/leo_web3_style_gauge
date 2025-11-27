@@ -25,9 +25,9 @@ function compute_score(privacy: u8, soundness: u8, performance: u8) -> u8 {
 
 /// Classify the style score into a tiny discrete category.
 function classify_style(score: u8) -> u8 {
-    // 0–33   -> 0 (conservative / low-risk)
-    // 34–66  -> 1 (balanced)
-    // 67–100 -> 2 (aggressive / perf-heavy)
+       // 0–33   -> CLASS_CONSERVATIVE (low-risk)
+    // 34–66  -> CLASS_BALANCED
+    // 67–100 -> CLASS_AGGRESSIVE (perf-heavy)
 
     if score <= 33u8 {
         return 0u8;
