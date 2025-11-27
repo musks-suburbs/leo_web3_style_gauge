@@ -8,6 +8,9 @@
 //   2u8 => Soundness-first protocol lab
 
 program web3_style_gauge.aleo;
+const STYLE_AZTEC: u8 = 0u8;
+const STYLE_ZAMA: u8 = 1u8;
+const STYLE_SOUND: u8 = 2u8;
 
 function choose_style(
     privacy: u8,    // how important privacy is  (0–10)
