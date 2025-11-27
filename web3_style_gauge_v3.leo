@@ -117,3 +117,7 @@ transition style_scores_public(
 
     return (aztec_score, zama_score, soundness_score, ux_score, chosen);
 }
+// Example:
+//   privacy = 8, fhe = 7, soundness = 6, ux_speed = 5
+//   -> style_scores_public(...) will return four scores and a style index
+//      that frontends can map to "Aztec-style", "Zama-style", etc.
