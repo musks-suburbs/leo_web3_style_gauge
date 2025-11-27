@@ -17,8 +17,8 @@ function compute_score(privacy: u8, soundness: u8, performance: u8) -> u8 {
     let s: u16 = soundness as u16;
     let t: u16 = performance as u16;
 
-    let sum: u16 = p + s + t;
-    let avg: u16 = sum / 3u16;
+      let sum: u16 = p + s + t;
+    let avg: u16 = sum / 3u16;    // integer division (floor average)
 
     return avg as u8;
 }
