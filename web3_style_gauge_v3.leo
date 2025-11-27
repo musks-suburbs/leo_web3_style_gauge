@@ -41,8 +41,8 @@ function choose_style_extended(
         privacy16 * 1u16 +
         soundness16 * 1u16;
 
-    // Pick the max score; ties are broken by the order of checks
-    // (Aztec -> Zama -> Soundness -> UX).
+     // Ties are broken by the order of checks:
+    // Aztec -> Zama -> Soundness -> UX.
     let mut best_index: u8 = 0u8;
     let mut best_score: u16 = aztec_score;
 
