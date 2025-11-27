@@ -54,7 +54,7 @@ transition set_gauge(privacy: u8, soundness: u8, performance: u8) -> GaugePublic
     let score: u8 = compute_score(privacy, soundness, performance);
     let class: u8 = classify_style(score);
 
-    let gauge: GaugePublic = GaugePublic {
+      let gauge: GaugePublic = GaugePublic {
         owner,
         privacy,
         soundness,
@@ -62,6 +62,7 @@ transition set_gauge(privacy: u8, soundness: u8, performance: u8) -> GaugePublic
         score,
         class,
     };
+
 
     return gauge;
 }
