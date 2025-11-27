@@ -79,6 +79,17 @@ transition choose_style_public_v3(
     let style: u8 = choose_style_extended(privacy, fhe, soundness, ux_speed);
     return style;
 }
+// Public transition: returns (style_index, style_label).
+transition choose_style_with_label(
+    privacy: u8,
+    fhe: u8,
+    soundness: u8,
+    ux_speed: u8,
+) -> (u8, string) {
+    let style: u8 = choose_style_extended(privacy, fhe, soundness, ux_speed);
+    let label: string = style_label(style);
+    return (style, label);
+}
 
 // This one exposes all scores AND the chosen style index,
 // useful for debugging or richer off-chain logic.
