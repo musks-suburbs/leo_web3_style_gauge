@@ -9,6 +9,14 @@ record GaugePublic {
     score: u8,   // 0–100 overall style score
     class: u8,   // 0=conservative, 1=balanced, 2=aggressive
 }
+function compute_score(privacy: u8, soundness: u8, performance: u8) -> u8 {
+    // Inputs are expected in the inclusive range [0, SCORE_MAX].
+    assert(privacy <= SCORE_MAX);
+    assert(soundness <= SCORE_MAX);
+    assert(performance <= SCORE_MAX);
+
+    // Work in u16 to avoid overflow, then cast back to u8.
+    let p: u16 = privacy as u16;
 
 /// Compute the overall style score from three 0–100 inputs.
 function compute_score(privacy: u8, soundness: u8, performance: u8) -> u8 {
