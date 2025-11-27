@@ -1,5 +1,6 @@
 program web3_style_gauge_v3.aleo;
-
+// Inputs are modeled as u8 for simplicity.
+// Recommended range is 0–10 or 0–100, but this is not enforced here.
 // ------------------------
 // Core scoring function
 // ------------------------
