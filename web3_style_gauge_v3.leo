@@ -79,6 +79,23 @@ transition choose_style_public_v3(
     let style: u8 = choose_style_extended(privacy, fhe, soundness, ux_speed);
     return style;
 }
+// Return the relative weight profile (for documentation / calibration tools).
+// This does not affect the scoring logic.
+function get_weight_profile() -> (u16, u16, u16, u16, u16, u16, u16, u16, u16, u16, u16) {
+    return (
+        W_PRIVACY_AZTEC,
+        W_SOUNDNESS_AZTEC,
+        W_UX_AZTEC,
+        W_PRIVACY_ZAMA,
+        W_FHE_ZAMA,
+        W_SOUNDNESS_ZAMA,
+        W_SOUNDNESS_SND,
+        W_PRIVACY_SND,
+        W_UX_UX,
+        W_PRIVACY_UX,
+        W_SOUNDNESS_UX,
+    );
+}
 
 // This one exposes all scores AND the chosen style index,
 // useful for debugging or richer off-chain logic.
