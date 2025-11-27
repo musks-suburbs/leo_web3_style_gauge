@@ -68,8 +68,8 @@ function choose_style_extended(
 // Public transitions
 // ------------------------
 
-// A simple public transition mirroring the original idea, but with ux_speed
-// and the extended style set.
+// Public transition: returns only the chosen style index
+// based on the four slider inputs.
 transition choose_style_public_v3(
     privacy: u8,
     fhe: u8,
