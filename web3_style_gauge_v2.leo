@@ -9,6 +9,10 @@ record GaugePublic {
     score: u8,   // 0–100 overall style score
     class: u8,   // 0=conservative, 1=balanced, 2=aggressive
 }
+/// Returns (score, class) where:
+///   score: 0–100 overall
+///   class: 0=conservative, 1=balanced, 2=aggressive
+function compute_gauge(privacy: u8, soundness: u8, performance: u8) -> (u8, u8) {
 
 /// Compute the overall style score from three 0–100 inputs.
 function compute_score(privacy: u8, soundness: u8, performance: u8) -> u8 {
