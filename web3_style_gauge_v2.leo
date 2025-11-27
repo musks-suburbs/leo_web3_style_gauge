@@ -1,3 +1,6 @@
+// web3_style_gauge_v2.aleo
+// Public gauge for Web3 stack preferences (privacy, soundness, performance).
+
 program web3_style_gauge_v2.aleo;
 
 /// Public record of one gauge configuration + computed result.
