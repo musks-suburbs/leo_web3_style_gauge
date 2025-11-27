@@ -80,8 +80,8 @@ transition choose_style_public_v3(
     return style;
 }
 
-// This one exposes all scores AND the chosen style index,
-// useful for debugging or richer off-chain logic.
+// Public transition: returns all four scores plus the chosen style index.
+// Useful for debugging, analytics dashboards, or off-chain decision logic.
 transition style_scores_public(
     privacy: u8,
     fhe: u8,
