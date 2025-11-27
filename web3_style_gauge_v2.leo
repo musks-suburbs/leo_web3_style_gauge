@@ -1,6 +1,7 @@
 program web3_style_gauge_v2.aleo;
 
 /// Public record of one gauge configuration + computed result.
+/// These outputs are visible on-chain and can be indexed off-chain.
 record GaugePublic {
     owner: address,
     privacy: u8,
