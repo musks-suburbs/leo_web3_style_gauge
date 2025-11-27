@@ -22,6 +22,14 @@ function compute_score(privacy: u8, soundness: u8, performance: u8) -> u8 {
 
     return avg as u8;
 }
+record GaugePublic {
+    owner: address,      // account that set this gauge
+    privacy: u8,         // 0–100 privacy preference
+    soundness: u8,       // 0–100 soundness/correctness preference
+    performance: u8,     // 0–100 performance / UX speed preference
+    score: u8,           // 0–100 overall style score
+    class: u8,           // 0=conservative, 1=balanced, 2=aggressive
+}
 
 /// Classify the style score into a tiny discrete category.
 function classify_style(score: u8) -> u8 {
