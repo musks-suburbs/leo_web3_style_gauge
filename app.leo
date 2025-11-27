@@ -9,6 +9,7 @@
 
 program web3_style_gauge.aleo;
 
+// Expects all inputs in the inclusive range [0, MAX_PREF].
 function choose_style(
     privacy: u8,    // how important privacy is  (0–10)
     fhe: u8,        // how important FHE is      (0–10)
