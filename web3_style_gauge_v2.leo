@@ -1,4 +1,7 @@
 program web3_style_gauge_v2.aleo;
+const CLASS_CONSERVATIVE: u8 = 0u8;
+const CLASS_BALANCED: u8 = 1u8;
+const CLASS_AGGRESSIVE: u8 = 2u8;
 
 /// Public record of one gauge configuration + computed result.
 record GaugePublic {
