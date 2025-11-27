@@ -1,5 +1,6 @@
 program web3_style_gauge_v3.aleo;
-
+// Version 3: extended with FHE and UX sliders, plus 4 style buckets.
+// Earlier versions only considered (privacy, soundness, perf).
 // ------------------------
 // Core scoring function
 // ------------------------
