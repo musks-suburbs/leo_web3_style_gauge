@@ -4,6 +4,8 @@ program web3_style_gauge_v3.aleo;
 // Core scoring function
 // ------------------------
 
+// Pure helper: given 4 sliders (0–255 in this u8 model), pick a style index:
+// 0 = Aztec-like, 1 = Zama-like, 2 = Soundness-first, 3 = UX/DeFi.
 function choose_style_extended(
     privacy: u8,
     fhe: u8,
