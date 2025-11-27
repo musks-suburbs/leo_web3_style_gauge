@@ -62,6 +62,9 @@ transition set_gauge(privacy: u8, soundness: u8, performance: u8) -> GaugePublic
         score,
         class,
     };
+// Example (not executable here):
+//   compute_gauge(privacy=80u8, soundness=90u8, performance=60u8)
+//   might return (score≈76, class=CLASS_AGGRESSIVE).
 
     return gauge;
 }
