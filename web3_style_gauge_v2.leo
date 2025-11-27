@@ -49,7 +49,9 @@ function compute_gauge(privacy: u8, soundness: u8, performance: u8) -> (u8, u8) 
 /// You could later index these records off-chain or in tooling.
 transition set_gauge(privacy: u8, soundness: u8, performance: u8) -> GaugePublic {
     // In Aleo, the caller is the transaction sender.
+        // self.caller -> address of the transaction sender.
     let owner: address = self.caller;
+
 
     let score: u8 = compute_score(privacy, soundness, performance);
     let class: u8 = classify_style(score);
