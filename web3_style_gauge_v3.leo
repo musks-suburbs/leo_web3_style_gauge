@@ -15,6 +15,8 @@ function choose_style_extended(
     let fhe16: u16 = fhe as u16;
     let soundness16: u16 = soundness as u16;
     let ux16: u16 = ux_speed as u16;
+    let (aztec_score, zama_score, soundness_score, ux_score) =
+        compute_scores(privacy, fhe, soundness, ux_speed);
 
     // Heuristic weights (tweak as you like):
     //
