@@ -1,5 +1,7 @@
 program web3_style_gauge_v2.aleo;
 
+/// v2: scores in 0–100, includes public GaugePublic record and class bucketing.
+
 /// Public record of one gauge configuration + computed result.
 record GaugePublic {
     owner: address,
