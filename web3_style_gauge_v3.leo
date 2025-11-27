@@ -40,6 +40,20 @@ function choose_style_extended(
         ux16 * 4u16 +
         privacy16 * 1u16 +
         soundness16 * 1u16;
+// Map a style index into a human-readable label.
+function style_label(index: u8) -> string {
+    if index == STYLE_AZTEC {
+        return "Aztec-style";
+    }
+    if index == STYLE_ZAMA {
+        return "Zama-style";
+    }
+    if index == STYLE_SOUNDNESS {
+        return "Soundness-first";
+    }
+    // default: UX
+    return "UX/DeFi-style";
+}
 
     // Pick the max score; ties are broken by the order of checks
     // (Aztec -> Zama -> Soundness -> UX).
