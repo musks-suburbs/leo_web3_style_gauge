@@ -43,22 +43,22 @@ function choose_style_extended(
 
     // Pick the max score; ties are broken by the order of checks
     // (Aztec -> Zama -> Soundness -> UX).
-    let mut best_index: u8 = 0u8;
+        let mut best_index: u8 = STYLE_AZTEC;
     let mut best_score: u16 = aztec_score;
 
     if zama_score > best_score {
         best_score = zama_score;
-        best_index = 1u8;
+        best_index = STYLE_ZAMA;
     }
 
     if soundness_score > best_score {
         best_score = soundness_score;
-        best_index = 2u8;
+        best_index = STYLE_SOUNDNESS;
     }
 
     if ux_score > best_score {
         best_score = ux_score;
-        best_index = 3u8;
+        best_index = STYLE_UX;
     }
 
     return best_index;
