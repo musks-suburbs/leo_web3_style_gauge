@@ -93,24 +93,8 @@ transition style_scores_public(
     let soundness16: u16 = soundness as u16;
     let ux16: u16 = ux_speed as u16;
 
-    let aztec_score: u16 =
-        privacy16 * 3u16 +
-        soundness16 * 2u16 +
-        ux16 * 1u16;
-
-    let zama_score: u16 =
-        privacy16 * 2u16 +
-        fhe16 * 3u16 +
-        soundness16 * 1u16;
-
-    let soundness_score: u16 =
-        soundness16 * 4u16 +
-        privacy16 * 1u16;
-
-    let ux_score: u16 =
-        ux16 * 4u16 +
-        privacy16 * 1u16 +
-        soundness16 * 1u16;
+        let (aztec_score, zama_score, soundness_score, ux_score) =
+        compute_scores(privacy, fhe, soundness, ux_speed);
 
     let chosen: u8 =
         choose_style_extended(privacy, fhe, soundness, ux_speed);
