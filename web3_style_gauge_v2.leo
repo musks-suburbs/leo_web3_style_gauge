@@ -40,8 +40,7 @@ function classify_style(score: u8) -> u8 {
 
 /// Pure helper so you can just call this function from tooling/tests.
 function compute_gauge(privacy: u8, soundness: u8, performance: u8) -> (u8, u8) {
-    let score: u8 = compute_score(privacy, soundness, performance);
-    let class: u8 = classify_style(score);
+       let (score, class): (u8, u8) = compute_gauge(privacy, soundness, performance);
     return (score, class);
 }
 
