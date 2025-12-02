@@ -29,14 +29,13 @@ function classify_style(score: u8) -> u8 {
     // 34–66  -> 1 (balanced)
     // 67–100 -> 2 (aggressive / perf-heavy)
 
-    if score <= 33u8 {
-        return 0u8;
-    } else if score <= 66u8 {
-        return 1u8;
+      if score <= SCORE_LOW_MAX {
+        return CLASS_CONSERVATIVE;
+    } else if score <= SCORE_MID_MAX {
+        return CLASS_BALANCED;
     } else {
-        return 2u8;
+        return CLASS_AGGRESSIVE;
     }
-}
 
 /// Pure helper so you can just call this function from tooling/tests.
 function compute_gauge(privacy: u8, soundness: u8, performance: u8) -> (u8, u8) {
