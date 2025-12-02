@@ -63,5 +63,5 @@ transition set_gauge(privacy: u8, soundness: u8, performance: u8) -> GaugePublic
         class,
     };
 
-    return gauge;
+     return gauge;
 }
