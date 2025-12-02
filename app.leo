@@ -54,3 +54,7 @@ transition choose_style_public(
     let style: u8 = choose_style(privacy, fhe, soundness);
     style
 }
+    choose_style_internal(privacy, fhe, soundness)
+}
+
+
