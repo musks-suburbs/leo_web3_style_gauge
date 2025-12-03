@@ -27,15 +27,23 @@ function choose_style(
     let p: u16 = privacy as u16;
     let f: u16 = fhe as u16;
     let s: u16 = soundness as u16;
+const W_PRIV_AZTEC: u16 = 3u16;
+const W_SND_AZTEC: u16 = 2u16;
+
+const W_PRIV_ZAMA: u16 = 3u16;
+const W_FHE_ZAMA: u16 = 3u16;
+
+const W_SND_SOUND: u16 = 4u16;
+const W_PRIV_SOUND: u16 = 1u16;
 
     // Aztec-style: strong privacy, plus soundness.
-    let aztec_score: u16 = p * 3u16 + s * 2u16;
+  let aztec_score: u16 = p * W_PRIV_AZTEC + s * W_SND_AZTEC;
 
     // Zama-style: strong privacy plus FHE-heavy compute.
-    let zama_score: u16 = p * 3u16 + f * 3u16;
+    let zama_score: u16 = p * W_PRIV_ZAMA + f * W_FHE_ZAMA;
 
     // Soundness-first: maximum weight on soundness, some privacy.
-    let sound_score: u16 = s * 4u16 + p;
+   let sound_score: u16 = s * W_SND_SOUND + p * W_PRIV_SOUND;
 
     // Track the best score and index.
         let mut best_idx: u8 = STYLE_AZTEC;
