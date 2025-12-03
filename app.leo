@@ -8,6 +8,9 @@
 //   2u8 => Soundness-first protocol lab
 
 program web3_style_gauge.aleo;
+const STYLE_AZTEC: u8 = 0u8;
+const STYLE_ZAMA: u8 = 1u8;
+const STYLE_SOUND: u8 = 2u8;
 
 // Returns a style index:
 //   0u8 -> Aztec-style zk privacy rollup
