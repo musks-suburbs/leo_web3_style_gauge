@@ -41,12 +41,12 @@ function choose_style(
     let mut best_score: u16 = aztec_score;
 
     if zama_score > best_score {
-        best_idx = 1u8;
+        best_idx = STYLE_ZAMA;
         best_score = zama_score;
     };
 
     if sound_score > best_score {
-        best_idx = 2u8;
+        best_idx = STYLE_SOUND;
         best_score = sound_score;
     };
 
