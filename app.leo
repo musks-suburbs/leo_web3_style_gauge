@@ -53,6 +53,10 @@ function choose_style(
 
     best_idx
 }
+    // Basic input validation
+    assert(privacy <= MAX_PREF);
+    assert(fhe <= MAX_PREF);
+    assert(soundness <= MAX_PREF);
 
 transition choose_style_public(
     privacy: u8,
