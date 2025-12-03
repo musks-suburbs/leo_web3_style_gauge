@@ -37,7 +37,7 @@ function choose_style(
     let sound_score: u16 = s * 4u16 + p;
 
     // Track the best score and index.
-    let mut best_idx: u8 = 0u8;
+        let mut best_idx: u8 = STYLE_AZTEC;
     let mut best_score: u16 = aztec_score;
 
     if zama_score > best_score {
