@@ -45,6 +45,9 @@ const W_PRIV_SOUND: u16 = 1u16;
     // Soundness-first: maximum weight on soundness, some privacy.
    let sound_score: u16 = s * W_SND_SOUND + p * W_PRIV_SOUND;
 
+    // Note: in case of equal scores, the earlier style in this order wins:
+    // Aztec (0) > Zama (1) > Soundness (2).
+
     // Track the best score and index.
         let mut best_idx: u8 = STYLE_AZTEC;
     let mut best_score: u16 = aztec_score;
