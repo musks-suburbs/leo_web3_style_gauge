@@ -9,6 +9,8 @@ record GaugePublic {
     score: u8,   // 0–100 overall style score
     class: u8,   // 0=conservative, 1=balanced, 2=aggressive
 }
+// TODO: consider exposing human-readable class names ("conservative", etc.) in a separate helper.
+const CLASS_CONSERVATIVE: u8 = 0u8;
 
 /// Compute the overall style score from three 0–100 inputs.
 function compute_score(privacy: u8, soundness: u8, performance: u8) -> u8 {
