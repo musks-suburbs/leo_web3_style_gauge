@@ -68,6 +68,9 @@ function choose_style_extended(
 // Public transitions
 // ------------------------
 
+// Simple public transition mirroring the original idea...
+transition choose_style_public_v3( ...
+
 // A simple public transition mirroring the original idea, but with ux_speed
 // and the extended style set.
 transition choose_style_public_v3(
