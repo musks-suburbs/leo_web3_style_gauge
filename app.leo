@@ -69,6 +69,7 @@ const W_PRIV_SOUND: u16 = 1u16;
     assert(fhe <= MAX_PREF);
     assert(soundness <= MAX_PREF);
 
+/// Public wrapper so the chosen style can be verified on-chain.
 transition choose_style_public(
     privacy: u8,
     fhe: u8,
