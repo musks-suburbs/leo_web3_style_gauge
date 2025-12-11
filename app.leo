@@ -19,8 +19,8 @@ const STYLE_SOUND: u8 = 2u8;
 
 // Expects all inputs in the inclusive range [0, MAX_PREF].
 function choose_style(
-    privacy: u8,    // how important privacy is  (0–10)
-    fhe: u8,        // how important FHE is      (0–10)
+     privacy: u8,    // how important privacy is   (0–10)
+    fhe: u8,        // how important FHE is       (0–10)
     soundness: u8   // how important soundness is (0–10)
 ) -> u8 {
     // Convert to u16 for safer arithmetic.
