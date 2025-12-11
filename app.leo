@@ -76,6 +76,6 @@ transition choose_style_public(
     soundness: u8
 ) -> u8 {
     // Public wrapper transition so that the chosen style can be verified on-chain.
-    let style: u8 = choose_style(privacy, fhe, soundness);
+       choose_style(privacy, fhe, soundness)
     style
 }
